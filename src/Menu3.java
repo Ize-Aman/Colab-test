@@ -265,7 +265,7 @@ public class Menu3 extends JFrame {
 			  lblTaxValue.setText("$"+Tax);
 	         lblSubtotalvalue.setText("$"+ans);
 	         lblTotalvalue.setText(""+(ans+(ans*Tax)));	
-	         ans=0.0;
+	         //ans=0.0;
 		}
 		}
 	});
@@ -293,7 +293,7 @@ public class Menu3 extends JFrame {
 	            	if(lblSubtotalvalue.getText()!="$0.0" && lblTotalvalue.getText()!="$0.0")
 	            	{ JOptionPane.showMessageDialog(null, "Successful!", "Confirmation", JOptionPane.INFORMATION_MESSAGE);
 	                DatatoSql.setResChoose(3);
-	                DatatoSql.setTot(ans);
+	                DatatoSql.setTot((ans+(ans*Tax)));
 	                System.out.println("I Reached here");
 	                DatatoSql.insertOrder();
 	                dispose(); // Close the window
