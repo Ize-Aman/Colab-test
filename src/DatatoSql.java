@@ -1,17 +1,18 @@
 package src;
 
+import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import javax.swing.JFrame;
-
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
 
 public class DatatoSql extends JFrame {
 
-	//private static final long serialVersionUID = 1L;
-	//private static final int ResChoose = 0;
-
+	
+	  private JPanel contentPane;
 	  private static int ResChoose;
 	  private static double tot;
 	  private static int cus;

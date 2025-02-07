@@ -1,4 +1,8 @@
 package src;
+/*
+ * HELLOWWWWWWW
+ * HIIIIII
+ */
 
 import java.awt.EventQueue;
 
@@ -148,8 +152,8 @@ public class Menu2 extends JFrame {
 		scrollPane.setViewportView(panel_4);
 		panel_4.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		String[] img= {"images\\images (2).jpg","images\\images (1).jpg","images\\images (2).jpg","images\\images (2).jpg","images\\images (1).jpg","images\\images (1).jpg"};
-		String[] Name= {"Burger","Pizza","Burger","Burger","Pizza","Pizza"};
+		String[] img= {"images\\images (2).jpg","images\\Monster.png","images\\images (2).jpg","images\\images (2).jpg","images\\images (1).jpg","images\\images (1).jpg"};
+		String[] Name= {"Burger","Monster","Burger","Burger","Pizza","Pizza"};
 		JPanel[] panel1=new JPanel[50];
 		//start from here
 		JPanel[] panel_=new JPanel[50];
@@ -212,7 +216,7 @@ public class Menu2 extends JFrame {
 		lblPrice_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblPrice_1_2);
 		
-		lblmoney_1_2 = new JLabel(""+Pri[i]);
+		lblmoney_1_2 = new JLabel(" $"+Pri[i]);
 		lblmoney_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblmoney_1_2);
 		
@@ -314,5 +318,19 @@ public class Menu2 extends JFrame {
 	{
 		return i;
 	}
-		
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu2 frame = new Menu2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
+	
 }

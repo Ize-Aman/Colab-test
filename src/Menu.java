@@ -148,8 +148,8 @@ public class Menu extends JFrame {
 		scrollPane.setViewportView(panel_4);
 		panel_4.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		String[] img= {"images\\images (2).jpg","images\\images (1).jpg","images\\images (2).jpg","images\\images (2).jpg","images\\images (1).jpg","images\\images (1).jpg"};
-		String[] Name= {"Burger","Pizza","Burger","Burger","Pizza","Pizza"};
+		String[] img= {"images\\images (2).jpg","images\\images (1).jpg","images\\Monster.png","images\\images (2).jpg","images\\images (1).jpg","images\\Lasagna.jpg"};
+		String[] Name= {"Burger","Pizza","Monster","Burger","Pizza","Lasagna"};
 		JPanel[] panel1=new JPanel[50];
 		JPanel[] panel_=new JPanel[50];
 		//JPanel panel_[0];
@@ -212,7 +212,7 @@ public class Menu extends JFrame {
 		lblPrice_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblPrice_1_2);
 		
-		lblmoney_1_2 = new JLabel(""+Pri[i]);
+		lblmoney_1_2 = new JLabel(" $"+Pri[i]);
 		lblmoney_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblmoney_1_2);
 		
@@ -272,8 +272,7 @@ public class Menu extends JFrame {
 		btnReset.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//comboBox[i].setSelectedIndex(0);
-				//chckbxPurchase[i].setSelected(false);
+			
 				for(int j=0;j<i;j++)
 				{
 			             comboBox[j].setSelectedIndex(0);
@@ -294,7 +293,7 @@ public class Menu extends JFrame {
 	                DatatoSql.setTot(ans);
 	                System.out.println("I Reached here");
 	                DatatoSql.insertOrder();
-	                dispose(); // Close the window
+	                dispose();
 	                
 	            }}
 	        });
@@ -314,7 +313,18 @@ public class Menu extends JFrame {
 		return i;
 	}
 	
-
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu frame = new Menu();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	
 	
 }

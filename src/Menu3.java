@@ -46,6 +46,7 @@ public class Menu3 extends JFrame {
 
 	public Menu3() {
 		setTitle("menu3");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -213,7 +214,7 @@ public class Menu3 extends JFrame {
 		lblPrice_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblPrice_1_2);
 		
-		lblmoney_1_2 = new JLabel(""+Pri[i]);
+		lblmoney_1_2 = new JLabel(" $"+Pri[i]);
 		lblmoney_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblmoney_1_2);
 		
@@ -314,6 +315,19 @@ public class Menu3 extends JFrame {
 	{
 		return i;
 	}
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu3 frame = new Menu3();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
 	
 	
 }
