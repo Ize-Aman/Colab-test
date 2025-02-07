@@ -3,6 +3,7 @@ import java.sql.*;
 public class Customers extends Orders{
     /*
     lfjkl
+    ;lkg;l
      * instance variable declaration for Customers
      */
     private int customerID;
