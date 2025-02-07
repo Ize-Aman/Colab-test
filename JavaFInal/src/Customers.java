@@ -4,6 +4,7 @@ public class Customers extends Orders{
     /*
     lfjkl
     ;lkg;l
+    slkjfkls
      * instance variable declaration for Customers
      */
     private int customerID;
