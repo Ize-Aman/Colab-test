@@ -45,6 +45,7 @@ public class Menu extends JFrame {
 	}
 
 	public Menu() {
+		//Hi
 		setTitle("menu");
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
