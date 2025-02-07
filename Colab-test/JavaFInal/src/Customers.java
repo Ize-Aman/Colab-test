@@ -12,7 +12,7 @@ public class Customers extends Orders{
       * this is Aman's comment
       */
       /*
-      * this is Henok's comment
+      * this is Henok's comments
       */
     private int customerID;
     private String fName, phoneNum, lName, address, email;
