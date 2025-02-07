@@ -16,12 +16,6 @@ public class DemoJframe extends JFrame {
 	private JTextField textName;
 	private JTextField textAge;
 
-	/**
-	 * Launch the application.
-	 */
-	/**
-	 * Create the frame.
-	 */
 	public DemoJframe() {
 		setTitle("first project");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
