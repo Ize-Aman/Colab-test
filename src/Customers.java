@@ -1,19 +1,7 @@
 package src;
 import java.sql.*;
 public class Customers extends Orders{
-    /*
-    lfjkl
-    ;lkg;l
-    slkjfkls
-     * instance variable declaration for Customers
-     */
 
-     /*
-      * this is Aman's comment
-      */
-      /*
-      * this is Henok's comments
-      */
     private int customerID;
     private String fName, phoneNum, lName, address, email;
 

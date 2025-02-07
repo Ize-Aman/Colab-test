@@ -214,7 +214,7 @@ public class Menu3 extends JFrame {
 		lblPrice_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblPrice_1_2);
 		
-		lblmoney_1_2 = new JLabel(""+Pri[i]);
+		lblmoney_1_2 = new JLabel(" $"+Pri[i]);
 		lblmoney_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblmoney_1_2);
 		

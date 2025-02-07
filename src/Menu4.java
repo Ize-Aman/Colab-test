@@ -149,8 +149,8 @@ public class Menu4 extends JFrame {
 		scrollPane.setViewportView(panel_4);
 		panel_4.setLayout(new GridLayout(0, 2, 0, 0));
 		
-		String[] img= {"images\\images (2).jpg","images\\images (1).jpg","images\\images (2).jpg","images\\images (2).jpg","images\\images (1).jpg","images\\images (1).jpg"};
-		String[] Name= {"Burger","Pizza","Burger","Burger","Pizza","Pizza"};
+		String[] img= {"images\\images (2).jpg","images\\images (1).jpg","images\\images (2).jpg","images\\images (2).jpg","images\\images (1).jpg","images\\Monster.png"};
+		String[] Name= {"Burger","Pizza","Burger","Burger","Pizza","Monster"};
 		//start from here
 		JPanel[] panel_=new JPanel[50];
 		//JPanel panel_[0];
@@ -213,7 +213,7 @@ public class Menu4 extends JFrame {
 		lblPrice_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblPrice_1_2);
 		
-		lblmoney_1_2 = new JLabel(""+Pri[i]);
+		lblmoney_1_2 = new JLabel(" $"+Pri[i]);
 		lblmoney_1_2.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_8.add(lblmoney_1_2);
 		
