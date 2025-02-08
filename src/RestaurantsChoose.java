@@ -84,16 +84,5 @@ public class RestaurantsChoose extends JFrame {
 		setVisible(true);
 	
 	}
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-		            new RestaurantsChoose();
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	
 }

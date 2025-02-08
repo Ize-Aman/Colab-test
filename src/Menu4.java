@@ -314,19 +314,5 @@ public class Menu4 extends JFrame {
 	{
 		return i;
 	}
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Menu4 frame = new Menu4();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	
 	
 }
