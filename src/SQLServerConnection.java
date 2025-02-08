@@ -4,7 +4,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SQLServerConnection {
-    private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=DMS3;encrypt=true;trustServerCertificate=true;integratedSecurity=true;";
+    private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=DMS4;encrypt=true;trustServerCertificate=true;integratedSecurity=true;";
     private static Connection connection = null;
 
     public static Connection getConnection() throws SQLException {

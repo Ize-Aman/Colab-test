@@ -302,8 +302,11 @@ public class Menu4 extends JFrame {
 	{
 		for(int j=0;i<j;j++)
 		{
-		if(comboBox[j].getSelectedIndex()==0 && chckbxPurchase[j].isSelected())
+			if(comboBox[j].getSelectedIndex()==0 && chckbxPurchase[j].isSelected())
 			return false;
+
+			if(comboBox[j].getSelectedIndex()!=0 && !chckbxPurchase[j].isSelected())
+			     return false;
 		}
 		return true;
 	}
