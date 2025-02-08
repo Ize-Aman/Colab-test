@@ -304,7 +304,7 @@ public class Menu3 extends JFrame {
 	}
 	public Boolean corr()
 	{
-		for(int j=0;i<j;j++)
+		for(int j=0;j<i;j++)
 		{
 			if(comboBox[j].getSelectedIndex()==0 && chckbxPurchase[j].isSelected())
 			return false;
