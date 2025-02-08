@@ -43,10 +43,9 @@ public class Menu extends JFrame {
 	{
 		this.Tax=Tax;
 	}
-
 	public Menu() {
 		setTitle("menu");
-		setBounds(100, 100, 450, 300);
+		setBounds(390, 150, 490, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		Integer[] num= {0,1,2,3,4,5,6,7,8,9};

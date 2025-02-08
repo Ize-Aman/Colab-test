@@ -46,7 +46,7 @@ public class Menu2 extends JFrame {
 
 	public Menu2() {
 		setTitle("menu2");
-		setBounds(100, 100, 450, 300);
+		setBounds(390, 150, 490, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		Integer[] num= {0,1,2,3,4,5,6,7,8,9};

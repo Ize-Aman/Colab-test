@@ -46,8 +46,7 @@ public class Menu4 extends JFrame {
 
 	public Menu4() {
 		setTitle("menu4");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(390, 150, 490, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		Integer[] num= {0,1,2,3,4,5,6,7,8,9};
