@@ -1,10 +1,4 @@
 package src;
-/*
- * HELLOWWWWWWW
- * HIIIIII
- * this is the src branch
- * from menu2
- */
 
 import java.awt.EventQueue;
 
