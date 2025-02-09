@@ -263,7 +263,6 @@ public class Menu4 extends JFrame {
 			  lblTaxValue.setText("$"+Tax);
 	         lblSubtotalvalue.setText("$"+ans);
 	         lblTotalvalue.setText(""+(ans+(ans*Tax)));	
-	         ans=0.0;
 		}
 		}
 	});
@@ -272,8 +271,6 @@ public class Menu4 extends JFrame {
 		btnReset.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				//comboBox[i].setSelectedIndex(0);
-				//chckbxPurchase[i].setSelected(false);
 				for(int j=0;j<i;j++)
 				{
 			             comboBox[j].setSelectedIndex(0);
@@ -291,7 +288,7 @@ public class Menu4 extends JFrame {
 	            	if(lblSubtotalvalue.getText()!="$0.0" && lblTotalvalue.getText()!="$0.0")
 	            	{ JOptionPane.showMessageDialog(null, "Successful!", "Confirmation", JOptionPane.INFORMATION_MESSAGE);
 	                DatatoSql.setResChoose(4);
-	                DatatoSql.setTot(ans);
+	                DatatoSql.setTot((ans+(ans*Tax)));
 	                System.out.println("I Reached here");
 	                DatatoSql.insertOrder();
 	                dispose(); // Close the window
@@ -302,10 +299,13 @@ public class Menu4 extends JFrame {
 	}
 	public Boolean corr()
 	{
-		for(int j=0;i<j;j++)
+		for(int j=0;j<i;j++)
 		{
-		if(comboBox[j].getSelectedIndex()==0 && chckbxPurchase[j].isSelected())
+			if(comboBox[j].getSelectedIndex()==0 && chckbxPurchase[j].isSelected())
 			return false;
+
+			if(comboBox[j].getSelectedIndex()!=0 && !chckbxPurchase[j].isSelected())
+			     return false;
 		}
 		return true;
 	}
@@ -313,5 +313,19 @@ public class Menu4 extends JFrame {
 	{
 		return i;
 	}
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu4 frame = new Menu4();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
 	
 }

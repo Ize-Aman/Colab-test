@@ -262,7 +262,7 @@ public class Menu extends JFrame {
 			  lblTaxValue.setText("$"+Tax);
 	         lblSubtotalvalue.setText("$"+ans);
 	         lblTotalvalue.setText(""+(ans+(ans*Tax)));	
-	         ans=0.0;
+	         //ans=0.0;
 		}
 		}
 	});
@@ -289,7 +289,7 @@ public class Menu extends JFrame {
 	            	if(lblSubtotalvalue.getText()!="$0.0" && lblTotalvalue.getText()!="$0.0")
 	            	{ JOptionPane.showMessageDialog(null, "Successful!", "Confirmation", JOptionPane.INFORMATION_MESSAGE);
 	                DatatoSql.setResChoose(1);
-	                DatatoSql.setTot(ans);
+	                DatatoSql.setTot((ans+(ans*Tax)));
 	                System.out.println("I Reached here");
 	                DatatoSql.insertOrder();
 	                dispose();
@@ -300,10 +300,13 @@ public class Menu extends JFrame {
 	}
 	public Boolean corr()
 	{
-		for(int j=0;i<j;j++)
+		for(int j=0;j<i;j++)
 		{
 		if(comboBox[j].getSelectedIndex()==0 && chckbxPurchase[j].isSelected())
 			return false;
+
+			if(comboBox[j].getSelectedIndex()!=0 && !chckbxPurchase[j].isSelected())
+			     return false;
 		}
 		return true;
 	}
@@ -311,5 +314,19 @@ public class Menu extends JFrame {
 	{
 		return i;
 	}
-		
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Menu frame = new Menu();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
+	
 }
