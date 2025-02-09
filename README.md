@@ -23,7 +23,7 @@ This is a Java-based Delivery Management System developed by our group. The syst
 
 - Admin Side
 
-![alt text](<src\images\Screenshots\Screenshot 2025-01-28 111057.png>)
+![alt text](<src/images/Screenshots/Screenshot 2025-01-28 111057.png>)
 
 ## Technologies Used
 
