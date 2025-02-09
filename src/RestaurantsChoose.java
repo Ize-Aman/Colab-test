@@ -22,7 +22,6 @@ public class RestaurantsChoose extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
-	
 	public RestaurantsChoose() {
 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -32,68 +31,56 @@ public class RestaurantsChoose extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.NORTH);
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Resturants");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 43));
 		panel.add(lblNewLabel_1);
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane, BorderLayout.CENTER);
-		
-		String[] img= {"images\\Screenshot 2025-01-26 120639.png","images\\Screenshot 2025-01-26 120639.png","images\\Screenshot 2025-01-26 120639.png","images\\Screenshot 2025-01-26 120639.png"};
+
+		String[] img = { "images\\Screenshot 2025-01-26 120639.png", "images\\Screenshot 2025-01-26 120639.png",
+				"images\\Screenshot 2025-01-26 120639.png", "images\\Screenshot 2025-01-26 120639.png" };
 		JPanel panel_1 = new JPanel();
 		scrollPane.setViewportView(panel_1);
 		panel_1.setLayout(new GridLayout(0, 2, 0, 0));
-		JButton[] btnNewButton=new JButton[10];
-		for(int i=0;i<4;i++)
-		{
-		btnNewButton[i] = new JButton("");
-		btnNewButton[i].setBackground(Color.BLACK);
-		btnNewButton[i].setIcon(new ImageIcon(RestaurantsChoose.class.getResource(img[i])));
-		panel_1.add(btnNewButton[i]);
+		JButton[] btnNewButton = new JButton[10];
+		for (int i = 0; i < 4; i++) {
+			btnNewButton[i] = new JButton("");
+			btnNewButton[i].setBackground(Color.BLACK);
+			btnNewButton[i].setIcon(new ImageIcon(RestaurantsChoose.class.getResource(img[i])));
+			panel_1.add(btnNewButton[i]);
 		}
 		btnNewButton[0].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				 new  Menu();
+				new Menu();
 			}
 		});
 		btnNewButton[1].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				 new  Menu2();
+				new Menu2();
 			}
 		});
-		
+
 		btnNewButton[2].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new  Menu3();
+				new Menu3();
 			}
 		});
 		btnNewButton[3].addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				new  Menu4();
+				new Menu4();
 			}
 		});
 		setVisible(true);
-	   setDefaultCloseOperation(EXIT_ON_CLOSE);
-	}
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-		            new RestaurantsChoose();
-					
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 }

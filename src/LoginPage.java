@@ -1,9 +1,9 @@
 package src;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.sql.*;
-
 
 public class LoginPage extends JFrame {
 
@@ -19,7 +19,7 @@ public class LoginPage extends JFrame {
     public LoginPage() {
         initComponents();
     }
-                     
+
     private void initComponents() {
 
         setTitle("Welcome!");
@@ -64,75 +64,81 @@ public class LoginPage extends JFrame {
         GroupLayout jPanel2Layout = new GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jLabel1)
-                .addGap(66, 66, 66)
-                .addComponent(jSeparator2, GroupLayout.PREFERRED_SIZE, 13, GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
-                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField2)
-                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPasswordField1))
-                .addContainerGap(109, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jSeparator3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+                jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(62, 62, 62)
+                                .addComponent(jLabel1)
+                                .addGap(66, 66, 66)
+                                .addComponent(jSeparator2, GroupLayout.PREFERRED_SIZE, 13, GroupLayout.PREFERRED_SIZE)
+                                .addGap(89, 89, 89)
+                                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTextField2)
+                                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 93,
+                                                        GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 93,
+                                                        GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(jPasswordField1))
+                                .addContainerGap(109, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jSeparator3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+                                                GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))));
         jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPasswordField1, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jSeparator2, GroupLayout.PREFERRED_SIZE, 201, GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(70, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jSeparator3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+                jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addGap(101, 101, 101)
+                                .addComponent(jTextField2, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jPasswordField1, GroupLayout.PREFERRED_SIZE, 39,
+                                                        GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addGroup(jPanel2Layout
+                                                        .createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(jButton2, GroupLayout.PREFERRED_SIZE, 34,
+                                                                GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(jButton1, GroupLayout.PREFERRED_SIZE, 34,
+                                                                GroupLayout.PREFERRED_SIZE))
+                                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGroup(GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel1)
+                                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(68, 68, 68)
+                                .addComponent(jSeparator2, GroupLayout.PREFERRED_SIZE, 201, GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(70, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jSeparator3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+                                                GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE))));
 
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE,
+                                GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE,
+                                GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         pack();
-    }// </editor-fold>                        
+    }// </editor-fold>
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        if(evt.getActionCommand() == "Register"){
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (evt.getActionCommand() == "Register") {
             String username = jTextField2.getText().trim();
             String password = new String(jPasswordField1.getPassword()).trim();
 
-            if (username.isEmpty() || password.isEmpty()){
+            if (username.isEmpty() || password.isEmpty()) {
                 ErrorDialog.showErrorDialog("Fields can't be empty");
                 return;
             }
@@ -141,52 +147,52 @@ public class LoginPage extends JFrame {
                 ErrorDialog.showErrorDialog("Username must contain exactly two words");
                 return;
             }
-            //take the first name and last name
+            // take the first name and last name
             String fName = usernameParts[0];
             String lName = usernameParts[1];
-            System.out.println(fName + " " +lName);
+            System.out.println(fName + " " + lName);
 
-            try{
+            try {
                 Connection connection = SQLServerConnection.getConnection();
-                PreparedStatement checkStmt = connection.prepareStatement("SELECT * FROM UserDetail WHERE UserName = ?");
-                PreparedStatement insertStmt = connection.prepareStatement("INSERT INTO UserDetail (UserName, Password, UserType) VALUES (?, ?, 'C')");
-                PreparedStatement insertCustomerStmt = connection.prepareStatement("INSERT INTO Customer (F_Name, L_Name, Phone, Gender, Address) VALUES (?, ?,'0000000000', 'M', 'Unspecified')");
-                    
+                PreparedStatement checkStmt = connection
+                        .prepareStatement("SELECT * FROM UserDetail WHERE UserName = ?");
+                PreparedStatement insertStmt = connection
+                        .prepareStatement("INSERT INTO UserDetail (UserName, Password, UserType) VALUES (?, ?, 'C')");
+                PreparedStatement insertCustomerStmt = connection.prepareStatement(
+                        "INSERT INTO Customer (F_Name, L_Name, Phone, Gender, Address) VALUES (?, ?,'0000000000', 'M', 'Unspecified')");
+
                 checkStmt.setString(1, username);
                 ResultSet rs = checkStmt.executeQuery();
-                if (rs.next()){
+                if (rs.next()) {
                     ErrorDialog.showErrorDialog("Username already exists. Choose a different one.");
                     System.err.println("Didnt register");
                     return;
-                }
-                else{
+                } else {
                     insertStmt.setString(1, username);
                     insertStmt.setString(2, password);
                     int rowsInserted = insertStmt.executeUpdate();
-                    
+
                     insertCustomerStmt.setString(1, fName);
                     insertCustomerStmt.setString(2, lName);
                     insertCustomerStmt.executeUpdate();
-                    if (rowsInserted > 0){
+                    if (rowsInserted > 0) {
                         ErrorDialog.showErrorDialog("Registration successful!");
                         System.out.println("Registered");
-                    }
-                    else{
+                    } else {
                         ErrorDialog.showErrorDialog("Failed");
                     }
                 }
-            }
-            catch(SQLException e){
+            } catch (SQLException e) {
                 ErrorDialog.showErrorDialog("Error in the database");
                 System.out.println("Error in the database" + e);
             }
         }
-    }         
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt){
-        if(evt.getActionCommand() == "Login"){
-            try{
-                String userName,  password, userType, sql;
+    }
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (evt.getActionCommand() == "Login") {
+            try {
+                String userName, password, userType, sql;
                 userName = jTextField2.getText();
                 password = new String(jPasswordField1.getPassword());
                 Connection connection = SQLServerConnection.getConnection();
@@ -196,47 +202,45 @@ public class LoginPage extends JFrame {
                 preparedStatement.setString(2, password);
                 ResultSet resultSet = preparedStatement.executeQuery();
 
-                if(resultSet.next()){
+                if (resultSet.next()) {
                     dispose();
                     userType = resultSet.getString("UserType");
-                    if(userType.equals("A")){
+                    if (userType.equals("A")) {
                         dispose();
                         new Orders().setVisible(true);
-                    }
-                    else if (userType.equals("C")){
-                        //TODO add customer GUI here
+                    } else if (userType.equals("C")) {
+                        // TODO add customer GUI here
                         sql = "SELECT CustomerID FROM Customer WHERE F_Name = ? AND L_Name = ?";
                         PreparedStatement customerStmt = connection.prepareStatement(sql);
                         String[] nameParts = userName.split("\\s+");
                         customerStmt.setString(1, nameParts[0]);
                         customerStmt.setString(2, nameParts[1]);
                         ResultSet customerResultSet = customerStmt.executeQuery();
-    
-                        if(customerResultSet.next()){
+
+                        if (customerResultSet.next()) {
                             int customerID = customerResultSet.getInt("CustomerID");
                             System.out.println("Customer ID: " + customerID);
                             DatatoSql.setcus(customerID);
                         }
                         new RestaurantsChoose();
                     }
-                    
-                }
-                else{
+
+                } else {
                     ErrorDialog.showErrorDialog("Invalid username or password. Please try again or register.");
                 }
                 resultSet.close();
                 preparedStatement.close();
                 SQLServerConnection.closeConnection();
-            }
-            catch(SQLException e){
+            } catch (SQLException e) {
                 ErrorDialog.showErrorDialog("Error in the database");
                 System.err.println("Error " + e);
             }
-            
+
         }
     }
-    public static void main(String[] args){
-	    new LoginPage().setVisible(true);
-	
+
+    public static void main(String[] args) {
+        new LoginPage().setVisible(true);
+
     }
 }
