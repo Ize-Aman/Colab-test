@@ -9,6 +9,22 @@ This is a Java-based Delivery Management System developed by our group. The syst
 - **Authentication System**: Secure login for both admins and customers.
 - **Database Integration**: Connected with Microsoft SQL Server for data storage and retrieval.
 
+## Screenshots
+
+- Login Page
+
+![alt text](<src/images/Screenshots/Screenshot 2025-01-28 141949.png>)
+
+- Customer Side
+
+![alt text](<src/images/Screenshots/Screenshot 2025-02-09 193110.png>)
+
+![alt text](<src/images/Screenshots/Screenshot 2025-02-09 193143.png>)
+
+- Admin Side
+
+![alt text](<src\images\Screenshots\Screenshot 2025-01-28 111057.png>)
+
 ## Technologies Used
 
 - Java (OOP)
